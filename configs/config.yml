@@ -1,0 +1,66 @@
+# Estas opciones aplican como el script operará
+script_options:
+  # Intercambiar entre testnet y mainnet
+  # Configurar esto a False usará fondos REALES, usar bajo tu propio riesgo
+  TEST_MODE: True
+  LOG_TRADES: True
+  LOG_FILE: 'trades.txt'
+
+# Estas opciones aplicarán a los metodos que el script ejecuta
+trading_options:
+  # Selecciona con qué emparejar las monedas y extraer las monedas emparejadas con PAIR_WITH
+  PAIR_WITH: USDT
+
+  # Cantidad total por trade
+  QUANTITY: 15
+
+  # Lista de pares para excluir
+  # Por defecto excluiremos las mas populares pares fiats
+  FIATS:
+    - EURUSDT
+    - GBPUSDT
+    - JPYUSDT
+    - USDUSDT
+    - DOWN
+    - UP
+
+  # Máximo número de monedas a mantener
+  MAX_COINS: 7
+
+  # La cantidad de tiempo en MINUTOS para calcular la diferencia desde el precio actual
+  TIME_DIFFERENCE: 2
+
+  # Número de veces para checkear el TP/SL durante cada TIME_DIFFERENCE Mínimo 1
+  RECHECK_INTERVAL: 10
+
+  # La diferencia en % entre el primer y segundo checkeo para el precio
+  CHANGE_IN_PRICE: 10
+
+  # Define en % cuando vender una moneda que no este generando ganancias
+  STOP_LOSS: 2
+
+  # Define en % cuando tomar ganancias en una moneda rentable
+  TAKE_PROFIT: .8
+
+  # Usar una lista personalizada tickers.txt para filtrar pares
+  CUSTOM_LIST: True
+
+  # Nombre de la lista personalizada de tickers
+  TICKERS_LIST: 'tickers.txt'
+
+  # Si utilizar o no el trailing stop loss; el valor por defecto es True
+  USE_TRAILING_STOP_LOSS: True
+
+  # Cuando sea alcanzado el TAKE_PROFIT, mover STOP_LOSSS a TRAILING_STOP_LOSS puntos porcentuales por debajo del TAKE_PROFIT para asegurar ganancias
+  # Cuando sea alcanzado el TAKE_PROFIT, subir TAKE_PROFIT en TRAILING_TAKE_PROFIT puntos porcentuales
+  TRAILING_STOP_LOSS: .4
+  TRAILING_TAKE_PROFIT: .1
+
+  # Tarifa de trading en % por trade.
+  # Si se usa 0.75% (usando BNB para las fees) debes tener BNB en tu cuenta para cubrir las tarifas de trading.
+  # Si usas BNB para fees, debes tener habilitado en tu página de Binance.
+  TRADING_FEE: .075
+
+  SIGNALLING_MODULES:
+    - signalsampledmod
+    - pausebotmod

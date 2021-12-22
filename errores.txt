@@ -1,0 +1,118 @@
+Traceback (most recent call last):
+  File "c:/Users/engel/Documents/Programar/Python/bot_binance/bot_binance.py", line 605, in <module>
+    orders, last_price, volume = buy()
+  File "c:/Users/engel/Documents/Programar/Python/bot_binance/bot_binance.py", line 258, in buy
+    volume, last_price = convert_volume()
+  File "c:/Users/engel/Documents/Programar/Python/bot_binance/bot_binance.py", line 221, in convert_volume
+    volatile_coins, number_of_coins, last_price = wait_for_price()
+  File "c:/Users/engel/Documents/Programar/Python/bot_binance/bot_binance.py", line 122, in wait_for_price
+    get_price(add_to_historical=True)
+  File "c:/Users/engel/Documents/Programar/Python/bot_binance/bot_binance.py", line 80, in get_price
+    prices = client.get_all_tickers()
+  File "C:\Users\engel\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\LocalCache\local-packages\Python38\site-packages\binance\client.py", line 437, in get_all_tickers
+    return self._get('ticker/price', version=self.PRIVATE_API_VERSION)
+  File "C:\Users\engel\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\LocalCache\local-packages\Python38\site-packages\binance\client.py", line 237, in _get
+    return self._request_api('get', path, signed, version, **kwargs)
+  File "C:\Users\engel\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\LocalCache\local-packages\Python38\site-packages\binance\client.py", line 202, in _request_api
+    return self._request(method, uri, signed, **kwargs)
+  File "C:\Users\engel\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\LocalCache\local-packages\Python38\site-packages\binance\client.py", line 197, in _request
+    return self._handle_response()
+  File "C:\Users\engel\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\LocalCache\local-packages\Python38\site-packages\binance\client.py", line 230, in _handle_response
+    raise BinanceAPIException(self.response)
+binance.exceptions.BinanceAPIException: APIError(code=-1003): Too much request weight used; current limit is 1200 request weight per 1 MINUTE. Please use the websocket for live updates to avoid polling the API.
+
+//////////////////////////////////////////////////////////////////
+Recibimos un error de tiempo de espera de Binance. Ejecutando nuevamente... Contador actual: 1
+HTTPSConnectionPool(host='testnet.binance.vision', port=443): Read timed out. (read timeout=10)
+Traceback (most recent call last):
+  File "C:\Users\engel\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\LocalCache\local-packages\Python38\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "C:\Users\engel\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\LocalCache\local-packages\Python38\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.8_3.8.2800.0_x64__qbz5n2kfra8p0\lib\socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+pausebotmod: El mercado no se ve muy bien, el bot dejó de comprar 9/7 Esperando 1 minutos para el próximos checkeo del mercado
+  File "C:\Users\engel\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\LocalCache\local-packages\Python38\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "C:\Users\engel\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\LocalCache\local-packages\Python38\site-packages\urllib3\connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\engel\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\LocalCache\local-packages\Python38\site-packages\urllib3\connectionpool.py", line 1010, in _validate_conn
+    conn.connect()
+  File "C:\Users\engel\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\LocalCache\local-packages\Python38\site-packages\urllib3\connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "C:\Users\engel\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\LocalCache\local-packages\Python38\site-packages\urllib3\connection.py", line 181, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x0000013471C1E4F0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\engel\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\LocalCache\local-packages\Python38\site-packages\requests\adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "C:\Users\engel\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\LocalCache\local-packages\Python38\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "C:\Users\engel\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\LocalCache\local-packages\Python38\site-packages\urllib3\util\retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='testnet.binance.vision', port=443): Max retries exceeded with url: /api/v3/ticker/price (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000013471C1E4F0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "bot_binance.py", line 529, in <module>
+    orders, last_price, volume = buy()
+  File "bot_binance.py", line 224, in buy
+    volume, last_price = convert_volume()
+  File "bot_binance.py", line 187, in convert_volume
+    volatile_coins, number_of_coins, last_price = wait_for_price()
+  File "bot_binance.py", line 80, in wait_for_price
+    pause_bot()
+  File "bot_binance.py", line 164, in pause_bot
+    coins_sold = sell_coins()
+  File "bot_binance.py", line 288, in sell_coins
+    last_price = get_price(add_to_historical=False)
+  File "bot_binance.py", line 47, in get_price
+    prices = client.get_all_tickers()
+  File "C:\Users\engel\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\LocalCache\local-packages\Python38\site-packages\binance\client.py", line 437, in get_all_tickers
+    return self._get('ticker/price', version=self.PRIVATE_API_VERSION)
+  File "C:\Users\engel\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\LocalCache\local-packages\Python38\site-packages\binance\client.py", line 237, in _get
+    return self._request_api('get', path, signed, version, **kwargs)
+  File "C:\Users\engel\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\LocalCache\local-packages\Python38\site-packages\binance\client.py", line 202, in _request_api
+    return self._request(method, uri, signed, **kwargs)
+  File "C:\Users\engel\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\LocalCache\local-packages\Python38\site-packages\binance\client.py", line 196, in _request
+    self.response = getattr(self.session, method)(uri, **kwargs)
+  File "C:\Users\engel\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\LocalCache\local-packages\Python38\site-packages\requests\sessions.py", line 555, in get
+Signalsample: Analizando 5 monedas
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\engel\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\LocalCache\local-packages\Python38\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\engel\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\LocalCache\local-packages\Python38\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\engel\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\LocalCache\local-packages\Python38\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='testnet.binance.vision', port=443): Max retries exceeded with url: /api/v3/ticker/price (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000013471C1E4F0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+.....
+
+
+
+/////////////////////////////////////////////////////////////
+Exception:
+HTTPSConnectionPool(host='scanner.tradingview.com', port=443): Max retries exceeded with url: /crypto/scan (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000265330B3FD0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+Coin: ETHUSDT
+First handler: <tradingview_ta.main.TA_Handler object at 0x00000265330ADDC0>
+Second handler: <tradingview_ta.main.TA_Handler object at 0x00000265330AD340>
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.8_3.8.2800.0_x64__qbz5n2kfra8p0\lib\threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.8_3.8.2800.0_x64__qbz5n2kfra8p0\lib\threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "c:\Users\engel\Documents\Programar\Python\bot_binance\signalsampledmod.py", line 102, in do_work
+    signal_coins = analyze(pairs)
+  File "c:\Users\engel\Documents\Programar\Python\bot_binance\signalsampledmod.py", line 64, in analyze
+    first_tacheck = first_analysis.summary['BUY'] # Cantidad de indicadores para compra
+AttributeError: 'dict' object has no attribute 'summary'
