@@ -1,5 +1,0 @@
-ETH
-BNB
-LTC
-TRX
-XRP
