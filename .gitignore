@@ -1,0 +1,9 @@
+__pycache__
+env
+errores.txt
+trades.txt
+test_coins_bought.json
+postman
+configs/creds.yml
+configs/test.yml
+helpers/__pycache__
